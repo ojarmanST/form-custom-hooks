@@ -3,7 +3,6 @@ import { useDebugValue } from "react";
 
 export default function useFormInput(initialValue) {
   const [value, setValue] = useState(initialValue);
-  const [date, setDate] = useState(new Date());
 
   function handleChange(e) {
     setValue(e.target.value);
