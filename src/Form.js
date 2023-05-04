@@ -1,11 +1,15 @@
 import { useState } from "react";
 import useFormInput from "./useFormInput.js";
-
+import { useDebugValue } from "react";
 export default function Form() {
   const firstNameProps = useFormInput("Mary");
   const lastNameProps = useFormInput("Poppins");
 
-  console.log(firstNameProps);
+  const myDate = new Date();
+
+  useDebugValue(myDate, myDate.toDateString());
+
+  console.log(myDate);
   /*---------------------------------------------------
 
 *leaving for demo purposes*
